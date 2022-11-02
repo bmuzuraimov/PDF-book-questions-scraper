@@ -8,13 +8,14 @@ from contextlib import closing
 
 class ContentExtractor():
   def __init__(self, in_file):
+      self.__c_dir = os.path.dirname(os.path.dirname(__file__))
       self.exercises_obj = None
       self.topic_name = ''
-      self.topic_db = ''
-      self.in_file = '.' + in_file
-      self.abs_in_file = os.getcwd() + in_file
+      self.__table_name = ''
+      self.__in_file = '.' + in_file
+      self.__abs_in_file = self.__c_dir + in_file
       self.__out_file_dir = './docs/'
-      self.__abs_out_file_dir = os.getcwd()+'/docs/'
+      self.__abs_out_file_dir = self.__c_dir + '/docs/'
       self.__keyword_offset = {}
       self.__font_types = {}
       self.__content_types = []
@@ -34,6 +35,10 @@ class ContentExtractor():
       self.read_pdf()
       self.get_outline()
 
+  def set_topic(self, topic):
+    self.topic_name = topic
+    self.__topic2table()
+
   def print_outline(self):
     for topic in self.__outline_arr:
       if(topic[0].split(".")[0].isnumeric() and not topic[2]):
@@ -52,10 +57,10 @@ class ContentExtractor():
 
   def read_pdf(self):
     try:
-      self.__reader_obj = PdfReader(self.in_file)
+      self.__reader_obj = PdfReader(self.__in_file)
     except FileNotFoundError as e:
       try:
-        self.__reader_obj = PdfReader(self.abs_in_file)
+        self.__reader_obj = PdfReader(self.__abs_in_file)
       except FileNotFoundError as e:
         print("File doesn't exist!")
 
@@ -87,9 +92,8 @@ class ContentExtractor():
   def get_outline_arr(self):
     return self.__outline_arr
 
-  def extract_exercises(self, topic):
-    self.topic_name = topic
-    index = self.get_topic_index(topic)
+  def extract_exercises(self):
+    index = self.get_topic_index(self.topic_name)
     start_page = self.__outline_arr[index][1]
     end_page = self.__outline_arr[index+1][1] 
     self.__stop_keyword = self.__outline_arr[index+1][0]
@@ -128,7 +132,7 @@ class ContentExtractor():
 
   def get_topic_index(self, topic):
     for index, item in enumerate(self.__outline_arr):
-      if(item[0] == topic):
+      if(item[0].lower() == topic.lower()):
         return index
     return -1
 
@@ -147,40 +151,41 @@ class ContentExtractor():
       except FileNotFoundError as e:
         print("Error occured while writing a file!")
 
+  def __topic2table(self):
+    self.__table_name = re.sub('\d', '', self.topic_name).strip().replace(' ', '_').replace('.', '')
+
   def to_db(self):
     if(self.topic_name == ''):
       raise('Topic name is not defined!')
-    self.topic_db = re.sub('\d', '', self.topic_name)
-    self.topic_db = 'q_'+self.topic_db.strip()
-    self.topic_db = self.topic_db.replace(' ', '_').replace('.', '')
-    with closing(sqlite3.connect(os.getcwd()+'/database/pdfscraper.db')) as connection:
+    with closing(sqlite3.connect(self.__c_dir + '/database/aihk.db')) as connection:
         with closing(connection.cursor()) as cursor:
-          question_table_name = self.topic_db.lower()
+          question_table_name = 'q_'+self.__table_name.lower()
           sql_statement = """CREATE TABLE IF NOT EXISTS {table_name}(id INTEGER PRIMARY KEY, 
                             question_no INTEGER, question TEXT, is_mcq BOOLEAN);""".format(table_name=question_table_name)
           cursor.execute(sql_statement)
 
-          options_table_name = 'o_'+self.topic_db
+          options_table_name = 'o_'+self.__table_name.lower()
           sql_statement = """CREATE TABLE IF NOT EXISTS {p1}(id INTEGER PRIMARY KEY, 
                             qid INTEGER, letter TEXT, option TEXT, 
                             FOREIGN KEY(qid) REFERENCES {p2}(question_no));""".format(p1=options_table_name, p2=question_table_name)
           cursor.execute(sql_statement)
 
           for q in self.exercises_obj.questions:
-            sql_statement = """INSERT INTO {table_name}(question_no, question, is_mcq) VALUES (?, ?, ?);
-                          """.format(table_name=question_table_name)
-            cursor.execute(sql_statement, (q.question_no, q.question, q.is_mcq))
+            sql_statement = q.insert_question_query(question_table_name)
+            result = cursor.execute(sql_statement, (q.question_no, q.question, q.is_mcq))
             if(q.is_mcq):
               for letter, option in q.options.items():
-                sql_statement = """INSERT INTO {table_name}(qid, letter, option) VALUES (?, ?, ?);
-                        """.format(table_name=options_table_name)
-                cursor.execute(sql_statement, (q.question_no, letter, option))
+                sql_statement = q.insert_options_query(options_table_name)
+                result = cursor.execute(sql_statement, (q.question_no, letter, option))
+          connection.commit()
+
   def db_get_tables(self):
-    with closing(sqlite3.connect(os.getcwd()+'/database/pdfscraper.db')) as connection:
+    with closing(sqlite3.connect(self.__c_dir+'/database/aihk.db')) as connection:
       with closing(connection.cursor()) as cursor:
         cursor.execute("SELECT name FROM sqlite_schema WHERE type ='table' AND name NOT LIKE 'sqlite_%';")
         tables = cursor.fetchall()
-        print(tables)
+        for table in tables:
+          print(table[0])
 
   def __process_text(self):
     self.exercises_obj = Exercises(self.text_body)
@@ -203,12 +208,15 @@ class Exercises():
     content = content.replace('-\n', '')
     self.excercises_tok_raw = re.split(QUESTION_DEL, content)
     for index in range(len(self.excercises_tok_raw)):
+      if(self.excercises_tok_raw[index] == ''):
+        continue
       if(self.excercises_tok_raw[index][0].isnumeric() and self.excercises_tok_raw[index][-1] == QUESTION_NUMERIC_DEL):
         question_no = self.excercises_tok_raw[index][:-1]
         index += 1
         question_body = self.excercises_tok_raw[index]
         question_tok = re.split(OPTION_DEL, question_body)
         question_statement = question_tok[0].strip()
+        question_statement = question_statement.replace('\n', ' ')
         options_raw = question_tok[1:]
         options_filtered = {}
         for index in range(len(options_raw)):
@@ -236,3 +244,11 @@ class Question():
     for letter, option in self.options.items():
       result += "{} {}\n".format(letter, option)
     return result
+
+  def insert_question_query(self, table_name):
+    return """INSERT INTO {table_name}(question_no, question, is_mcq) VALUES (?, ?, ?);
+                          """.format(table_name=table_name)
+
+  def insert_options_query(self, table_name):
+    return """INSERT INTO {table_name}(qid, letter, option) VALUES (?, ?, ?);
+                        """.format(table_name=table_name)
