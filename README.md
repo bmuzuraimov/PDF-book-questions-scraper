@@ -1,2 +1,2 @@
-# Education-Technology
-Extract questions from pdf
+# Nodea
+Generate personalized exercises with ready answers
