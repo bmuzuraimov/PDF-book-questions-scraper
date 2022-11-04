@@ -1,0 +1,4 @@
+customtkinter==4.6.3
+py_stringmatching==0.4.2
+PyPDF2==2.11.1
+python-dotenv==0.21.0

@@ -1,0 +1,134 @@
+Question #1
+List all the permutations of {a, b, c }.
+Question #2
+How many different permutations are there of the set {a, b, c, d, e, f, g }?
+Question #3
+How many permutations of {a, b, c, d, e, f, g }end with a?
+Question #4
+LetS={1,2,3,4,5}.
+a) List all the 3-permutations of S.
+b) List all the 3-combinations of S.
+Question #5
+Find the value of each of these quantities.
+a) P(6,3)
+b) P(6,5)
+c) P(8,1)
+d) P(8,5)
+e) P(8,8)
+f) P(10,9)
+Question #6
+Find the value of each of these quantities.
+a) C(5,1)
+b) C(5,3)
+c) C(8,4)
+d) C(8,8)
+e) C(8,0)
+f) C(12,6)
+Question #7
+Find the number of 5-permutations of a set with nine elements.
+Question #8
+In how many different orders can five runners finish a race if no ties are allowed?
+Question #9
+How many possibilities are there for the win, place, and show (first, second, and thir
+d) positions in a horse racewith 12 horses if all orders of finish are possible?
+Question #10
+There are six different candidates for governor of a state. In how many different orders can the names of the can-didates be printed on a ballot?
+Question #11
+How many bit strings of length 10 contain
+a) exactly three 1s?
+b) at most three 1s?
+c) at least three 1s?
+d) an equal number of 0s and 1s?
+Question #13
+A group contains nmen and nwomen. How many ways are there to arrange these people in a row if the men andwomen alternate?
+Question #14
+In how many ways can a set of two positive integers less than 100 be chosen?
+Question #15
+In how many ways can a set of five letters be selected from the English alphabet?
+Question #16
+How many subsets with an odd number of elements does a set with 10 elements have?
+Question #17
+How many subsets with more than two elements does a set with 100 elements have?
+Question #18
+A coin is ﬂipped eight times where each ﬂip comes up either heads or tails. How many possible outcomes
+a) are there in total?
+b) contain exactly three heads?
+c) contain at least three heads?
+d) contain the same number of heads and tails?
+Question #19
+A coin is ﬂipped 10 times where each ﬂip comes up either heads or tails. How many possible outcomes
+a) are there in total?
+b) contain exactly two heads?
+c) contain at most three tails?
+d) contain the same number of heads and tails?
+Question #20
+How many bit strings of length 10 have
+a) the string BC D ?
+b) the string CFGA ?
+c) the strings BAandGF?
+d) the strings ABC andDE?
+e) the strings ABC andCDE ?
+f) the strings CBA andBED ?
+Question #22
+How many permutations of the letters ABCDEFGH contain
+a) the string ED?
+b) the string CDE ?
+c) the strings BAandFG H ?
+d) the strings AB,DE, and GH?
+e) the strings CAB andBED ?
+f) the strings BC A andABF ?
+Question #23
+How many ways are there for eight men and five women to stand in a line so that no two women stand next to eachother? [ Hint: First position the men and then consider possible positions for the women.]
+Question #24
+How many ways are there for 10 women and six men to stand in a line so that no two men stand next to eachother? [ Hint: First position the women and then consider possible positions for the men.]
+Question #25
+One hundred tickets, numbered 1 ,2,3,..., 100, are sold to 100 different people for a drawing. Four different prizesare awarded, including a grand prize (a trip to Tahiti). Howmany ways are there to award the prizes if
+a) there are no restrictions?
+b) the person holding ticket 47 wins the grand prize?
+c) the person holding ticket 47 wins one of the prizes?
+d) the person holding ticket 47 does not win a prize?
+e) the people holding tickets 19 and 47 both win prizes?
+f) the people holding tickets 19, 47, and 73 all winprizes?
+g) the people holding tickets 19, 47, 73, and 97 all winprizes?
+h) none of the people holding tickets 19, 47, 73, and 97wins a prize?i)the grand prize winner is a person holding ticket 19,47, 73, or 97?j)the people holding tickets 19 and 47 win prizes, butthe people holding tickets 73 and 97 do not win prizes?
+Question #26
+Thirteen people on a softball team show up for a game.
+a) How many ways are there to choose 10 players to takethe field?
+b) How many ways are there to assign the 10 positionsby selecting players from the 13 people who show up?
+c) Of the 13 people who show up, three are women. Howmany ways are there to choose 10 players to take thefield if at least one of these players must be a woman?
+Question #27
+A club has 25 members.
+a) How many ways are there to choose four members ofthe club to serve on an executive committee?
+b) How many ways are there to choose a president, vicepresident, secretary, and treasurer of the club, whereno person can hold more than one office?
+Question #29
+How many 4-permutations of the positive integers not exceeding 100 contain three consecutive integers k,k+1, k+2, in the correct order
+a) where these consecutive integers can perhaps be separated by other integers in the permutation?
+b) where they are in consecutive positions in the permutation?
+Question #30
+Seven women and nine men are on the faculty in the mathematics department at a school.
+a) How many ways are there to select a committee offive members of the department if at least one womanmust be on the committee?
+b) How many ways are there to select a committee offive members of the department if at least one womanand at least one man must be on the committee?
+Question #31
+The English alphabet contains 21 consonants and five vowels. How many strings of six lowercase letters of theEnglish alphabet contain
+a) exactly one vowel?
+b) exactly two vowels?
+c) at least one vowel?
+d) at least two vowels?
+Question #32
+How many strings of six lowercase letters from the English alphabet contain
+a) the letter a?
+b) the letters aandb?
+c) the letters aand bin consecutive positions with apreceding b, with all the letters distinct?
+d) the letters aand b, where ais somewhere to the leftofbin the string, with all the letters distinct?
+Question #33
+Suppose that a department contains 10 men and 15 women. How many ways are there to form a commit-tee with six members if it must have the same number ofmen and women?
+Question #34
+Suppose that a department contains 10 men and 15 women. How many ways are there to form a commit-tee with six members if it must have more women thanmen?
+Question #35
+How many bit strings contain exactly eight 0s and 10 1s if every 0 must be immediately followed by a 1?
+Question #36
+How many bit strings contain exactly five 0s and 14 1s if every 0 must be immediately followed by two 1s?
+Question #37
+How many bit strings of length 10 contain at least three 1s and at least three 0s?
+Question #38
+How many ways are there to select 12 countries in the United Nations to serve on a council if 3 are selectedfrom a block of 45, 4 are selected from a block of 57, andthe others are selected from the remaining 69 countries?

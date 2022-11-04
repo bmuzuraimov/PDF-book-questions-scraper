@@ -1,0 +1,238 @@
+Question #1
+LetAbe the set of students who live within one mile of school and let Bbe the set of students who walk to classes. Describe the students in each of these sets.
+a) A∩B
+b) A∪B
+c) A−B
+d) B−A
+Question #2
+Suppose that Ais the set of sophomores at your school andBis the set of students in discrete mathematics at your school. Express each of these sets in terms of Aand B.
+a) the set of sophomores taking discrete mathematics inyour school
+b) the set of sophomores at your school who are not taking discrete mathematics
+c) the set of students at your school who either are sophomores or are taking discrete mathematics
+d) the set of students at your school who either are notsophomores or are not taking discrete mathematics
+Question #3
+LetA={1,2,3,4,5}andB={0,3,6}. Find
+a) A∪B.
+b) A∩B.
+c) A−B.
+d) B−A.
+Question #4
+LetA={a,b,c,d,e }andB={a,b,c,d,e,f,g,h }. Find
+a) A∪B.
+b) A∩B.
+c) A−B.
+d) B−A.In Exercises 5–10 assume that Ais a subset of some underlying universal set U.
+Question #5
+Prove the complementation law in Table 1 by showing thatA=A.
+Question #6
+Prove the identity laws in Table 1 by showing that
+a) A∪∅= A.
+b) A∩U=A.
+Question #7
+Prove the domination laws in Table 1 by showing that
+a) A∪U=U.
+b) A∩∅=∅ .
+Question #8
+Prove the idempotent laws in Table 1 by showing that
+a) A∪A=A.
+b) A∩A=A.
+Question #9
+Prove the complement laws in Table 1 by showing that
+a) A∪A=U.
+b) A∩A=∅.
+Question #10
+Show that
+a) A−∅= A.
+b) ∅−A=∅.
+Question #11
+LetAandBbe sets. Prove the commutative laws from Table 1 by showing that
+a) A∪B=B∪A.
+b) A∩B=B∩A.
+Question #12
+Prove the first absorption law from Table 1 by showing that if AandBare sets, then A∪(A∩B)=A.
+Question #13
+Prove the second absorption law from Table 1 by showing that if AandBare sets, then A∩(A∪B)=A.
+Question #14
+Find the sets AandBifA−B={1,5,7,8},B−A= {2,10}, andA∩B={3,6,9}.
+Question #15
+Prove the second De Morgan law in Table 1 by showing that if AandBare sets, then A∪B=A∩B
+a) by showing each side is a subset of the other side.
+b) using a membership table.
+Question #16
+LetAandBbe sets. Show that
+a) (A∩B)⊆A.
+b) A⊆(A∪B).
+c) A−B⊆A.
+d) A∩(B−A)=∅.
+e) A∪(B−A)=A∪B.
+Question #17
+Show that if A,B, andCare sets, then A∩B∩C= A∪B∪C
+a) by showing each side is a subset of the other side.
+b) using a membership table.
+Question #18
+LetA,B, andCbe sets. Show that
+a) (A∪B)⊆(A∪B∪C).
+b) (A∩B∩C)⊆(A∩B).
+c) (A−B)−C⊆A−C.
+d) (A−C)∩(C−B)=∅.
+e) (B−A)∪(C−A)=(B∪C)−A.
+Question #19
+Show that if AandBare sets, then
+a) A−B=A∩B.
+b) (A∩B)∪(A∩B)=A.
+Question #20
+Show that if AandBare sets with A⊆B, then
+a) A∪B=B.
+b) A∩B=A.
+Question #21
+Prove the first associative law from Table 1 by showing that if A,B, andCare sets, then A∪(B∪C)= (A∪B)∪C.
+Question #22
+Prove the second associative law from Table 1 by showing that if A,B, andCare sets, then A∩(B∩C)= (A∩B)∩C.
+Question #23
+Prove the first distributive law from Table 1 by showing that if A,B, andCare sets, then A∪(B∩C)= (A∪B)∩(A∪C).
+Question #24
+LetA,B, and Cbe sets. Show that (A−B)−C= (A−C)−(B−C).
+Question #25
+LetA={0,2,4,6,8,10},B={0,1,2,3,4,5,6}, and C={4,5,6,7,8,9,10}. Find
+a) A∩B∩C.
+b) A∪B∪C.
+c) (A∪B)∩C.
+d) (A∩B)∪C.
+Question #26
+Draw the Venn diagrams for each of these combinations of the sets A,B, andC.
+a) A∩(B∪C)
+b) A∩B∩C
+c) (A−B)∪(A−C)∪(B−C)
+Question #27
+Draw the Venn diagrams for each of these combinations of the sets A,B, andC.
+a) A∩(B−C)
+b) (A∩B)∪(A∩C)
+c) (A∩B)∪(A∩C)
+Question #28
+Draw the Venn diagrams for each of these combinations of the sets A,B,C, andD.
+a) (A∩B)∪(C∩D)
+b) A∪B∪C∪D
+c) A−(B∩C∩D)
+Question #29
+What can you say about the sets AandBif we know that
+a) A∪C=B∪C?
+b) A∩C=B∩C?
+c) A∪C=B∪CandA∩C=B∩C?
+d) A∩B=B∩A?
+e) A−B=B−A?are sets suchthat
+Question #31
+LetAandBbe subsets of a universal set U. Show that A⊆Bif and only if B⊆A. Thesymmetric difference ofAandB, denoted by A⊕B,i s the set containing those elements in either AorB, but not in bothAandB.
+Question #32
+Find the symmetric difference of {1,3,5}and{1,2,3}.
+Question #33
+Find the symmetric difference of the set of computer science majors at a school and the set of mathematics majorsat this school.
+Question #34
+Draw a Venn diagram for the symmetric difference of the setsAandB.
+Question #35
+Show that A⊕B=(A∪B)−(A∩B).
+Question #36
+Show that A⊕B=(A−B)∪(B−A).
+Question #37
+Show that if Ais a subset of a universal set U, then
+a) A⊕A=∅.
+b) A⊕∅= A.
+c) A⊕U=A.
+d) A⊕A=U.
+Question #38
+Show that if AandBare sets, then
+a) A⊕B=B⊕A.
+b) (A⊕B)⊕B=A.
+Question #39
+What can you say about the sets AandBifA⊕B=A?
+Question #40
+Determine whether the symmetric difference is associative; that is, if A,B, andCare sets, does it follow that A⊕(B⊕C)=(A⊕B)⊕C?
+Question #41
+Suppose that A,B, andCare sets such that A⊕C= B⊕C. Must it be the case that A=B?
+Question #42
+IfA,B,C , andDare sets, does it follow that (A⊕B)⊕ (C⊕D)=(A⊕C)⊕(B⊕D)?
+Question #43
+IfA,B,C, andDare sets, does it follow that (A⊕B)⊕ (C⊕D)=(A⊕D)⊕(B⊕C)?
+Question #44
+Show that if AandBare finite sets, then A∪Bis a finite set.
+Question #45
+Show that if Ais an infinite set, then whenever Bis a set, A∪Bis also an infinite set.
+Question #46
+Show that if A,B, andCare sets, then |A∪B∪C|=|A|+|B|+|C|−|A∩B| −|A∩C|−|B∩C|+|A∩B∩C|. (This is a special case of the inclusion–exclusion principle, which will be studied in Chapter 8.)
+Question #47
+LetAi={1,2,3,...,i }fori=1,2,3,.... Find
+a) n/uniondisplayi=1Ai.
+b) n/intersectiondisplayi=1Ai.
+Question #48
+LetAi={...,−2,−1,0,1,...,i }. Find
+a) n/uniondisplayi=1Ai.
+b) n/intersectiondisplayi=1Ai.
+e) of length not exceeding i.Find
+Question #50
+Find/uniontext∞ i=1Aiand/intersectiontext∞ i=1Aiif for every positive integer i,
+a) Ai={i,i+1,i+2,...}.
+b) Ai={0,i}.
+c) Ai=(0,i), that is, the set of real numbers xwith0<x<i .
+d) Ai=(i,∞), that is, the set of real numbers xwithx>i .
+Question #51
+Find/uniontext∞ i=1Aiand/intersectiontext∞ i=1Aiif for every positive integer i,
+a) Ai={ −i,−i+1,...,−1,0,1,...,i −1,i}.
+b) Ai={ −i,i}.
+c) Ai=[ −i,i], that is, the set of real numbers xwith−i≤x≤i.
+d) Ai=[i,∞), that is, the set of real numbers xwithx≥i.
+Question #52
+Suppose that the universal set is U={1,2,3,4, 5,6,7,8,9,10}. Express each of these sets with bit strings where the ith bit in the string is 1 if iis in the set and 0 otherwise.
+a) {3,4,5}
+b) {1,3,6,10}
+c) {2,3,4,7,8,9}
+Question #53
+Using the same universal set as in the last problem, find the set specified by each of these bit strings.
+a) 11 1100 1111
+b) 01 0111 1000
+c) 10 0000 0001
+Question #54
+What subsets of a finite universal set do these bit strings represent?
+a) the string with all zeros
+b) the string with all ones
+Question #55
+What is the bit string corresponding to the difference of two sets?
+Question #56
+What is the bit string corresponding to the symmetric difference of two sets?
+Question #57
+Show how bitwise operations on bit strings can be used to find these combinations of A={a,b,c,d,e }, B={b,c,d,g,p,t, v},C={c,e,i,o,u,x,y,z }, and D={d, e, h, i ,n, o, t, u, x, y }.
+a) A∪B
+b) A∩B
+c) (A∪D)∩(B∪C)
+d) A∪B∪C∪D
+Question #58
+How can the union and intersection of nsets that all are subsets of the universal set Ube found using bit strings? Thesuccessor of the set Ais the set A∪{A}.
+Question #59
+Find the successors of the following sets.
+a) {1,2,3}
+b) ∅
+c) {∅}
+d) {∅,{∅}}elements have?Sometimes the number of times that an element occurs in anunordered collection matters. Multisets are unordered collections of elements where an element can occur as a membermore than once. The notation {m1·a1,m2·a2,...,m r·ar}denotes the multiset with element a1occurring m1times, element a2occurring m2times, and so on. The numbers mi,i=1,2,...,r are called the multiplicities of the elementsai,i=1,2,...,r .LetPandQbe multisets. The union of the multisets PandQis the multiset where the multiplicity of an element isthe maximum of its multiplicities in PandQ. The intersection ofPandQis the multiset where the multiplicity of anelement is the minimum of its multiplicities in PandQ. Thedifference ofPandQis the multiset where the multiplicityof an element is the multiplicity of the element in Pless itsmultiplicity in Qunless this difference is negative, in whichcase the multiplicity is 0. The sum ofPandQis the multisetwhere the multiplicity of an element is the sum of multiplic-ities in PandQ. The union, intersection, and difference ofPandQare denoted by P∪Q,P∩Q, andP−Q, respectively (where these operations should not be confused withthe analogous operations for sets). The sum of PandQisdenoted by P+Q.
+Question #61
+LetAandBbe the multisets {3·a,2·b,1· c}and {2·a,3·b,4·d}, respectively. Find
+a) A∪B.
+b) A∩B.
+c) A−B.
+d) B−A.
+e) A+B.
+Question #62
+Suppose that Ais the multiset that has as its elements the types of computer equipment needed by one depart-ment of a university and the multiplicities are the numberof pieces of each type needed, and Bis the analogous multiset for a second department of the university. Forinstance, Acould be the multiset {107·personal computers, 44 ·routers, 6 ·servers }andBcould be the multiset {14·personal computers, 6 ·routers, 2 ·mainframes }.
+a) What combination of AandBrepresents the equipment the university should buy assuming both depart-ments use the same equipment?
+d) . For instance, we write {0.6 Alice,
+Question #0
+9 Brian, 0.4 Fred, 0.1 Oscar, 0.5 Rita }for the set F(of famous peopl
+e) . Also suppose that Ris the set of richpeople with R={0.4 Alice, 0.8 Brian, 0.2 Fred, 0.9 Oscar,
+Question #0
+7 Rita }.
+Question #7 Rita }
+63.
+Question #63
+Thecomplement of a fuzzy set Sis the set S, with the degree of the membership of an element in Sequal to 1 minus the degree of membership of this element in S. FindF(the fuzzy set of people who are not famous) and R(the fuzzy set of people who are not ric
+h) .
+Question #64
+The union of two fuzzy sets SandTis the fuzzy set S∪T, where the degree of membership of an element in S∪Tis the maximum of the degrees of membership of this element in Sand in T. Find the fuzzy set F∪Rof rich or famous people.
+Question #65
+Theintersection of two fuzzy sets SandTis the fuzzy setS∩T, where the degree of membership of an element inS∩Tis the minimum of the degrees of membership of this element in Sand in T. Find the fuzzy set F∩R of rich and famous people.
